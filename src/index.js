@@ -96,7 +96,7 @@ async function deletePost(postId) {
         console.log(`Found ${posts.length} posts.`)
 
         for (const post of posts) {
-            console.log(post);    
+            
             await deletePost(post.id);
             await new Promise((r) => setTimeout(r, 100)); // Optional: avoid rate limits
             
